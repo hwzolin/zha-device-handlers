@@ -33,6 +33,7 @@ class ThirdRealityPlugCluster(CustomCluster):
         attribute_value=0x01,
         cluster_id=ThirdRealityPlugCluster.cluster_id,
         translation_key="reset_summation_delivered",
+        fallback_name="Reset summation delivered",
     )
     .add_to_registry()
 )

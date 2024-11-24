@@ -37,12 +37,16 @@ class ThirdRealityWaterLeakCluster(CustomCluster):
     .switch(
         attribute_name=ThirdRealityWaterLeakCluster.AttributeDefs.enable_siren.name,
         cluster_id=ThirdRealityWaterLeakCluster.cluster_id,
+        translation_key="enable_siren",
+        fallback_name="Enable siren",
     )
     .number(
         attribute_name=ThirdRealityWaterLeakCluster.AttributeDefs.siren_time.name,
         min_value=0,
         max_value=255,
         cluster_id=ThirdRealityWaterLeakCluster.cluster_id,
+        translation_key="siren_time",
+        fallback_name="Siren time",
     )
     .add_to_registry()
 )
