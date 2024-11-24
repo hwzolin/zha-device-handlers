@@ -20,7 +20,6 @@ class ThirdRealityMotionCluster(CustomCluster):
             id=0x0001,
             type=t.uint16_t,
             is_manufacturer_specific=True,
-            name="Cooldown_Time",
         )
 
 

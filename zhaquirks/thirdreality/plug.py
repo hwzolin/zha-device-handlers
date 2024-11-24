@@ -20,7 +20,6 @@ class ThirdRealityPlugCluster(CustomCluster):
             id=0x0000,
             type=t.uint8_t,
             is_manufacturer_specific=True,
-            name="Reset_summation_delivered",
         )
 
 

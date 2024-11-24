@@ -20,14 +20,12 @@ class ThirdRealityWaterLeakCluster(CustomCluster):
             id=0x0010,
             type=t.uint8_t,
             is_manufacturer_specific=True,
-            name="Enable_or_Disable_siren",
         )
 
         siren_time: Final = ZCLAttributeDef(
             id=0x0011,
             type=t.uint8_t,
             is_manufacturer_specific=True,
-            name="Siren_timer",
         )
 
 
