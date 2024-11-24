@@ -35,6 +35,5 @@ class ThirdRealityMotionCluster(CustomCluster):
         translation_key="cooldown_time",
         fallback_name="Cooldown time",
     )
-
     .add_to_registry()
 )
