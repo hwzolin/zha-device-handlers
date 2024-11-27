@@ -1,4 +1,4 @@
-"""Third Reality Plug devices."""
+"""Third Reality water leak devices."""
 
 from typing import Final
 
