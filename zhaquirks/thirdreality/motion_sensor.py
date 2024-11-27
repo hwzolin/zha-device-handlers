@@ -34,7 +34,7 @@ class ThirdRealityMotionCluster(CustomCluster):
         unit=UnitOfTime.SECONDS,
         cluster_id=ThirdRealityMotionCluster.cluster_id,
         translation_key="detection_interval",
-        fallback_name="detection_interval",
+        fallback_name="Detection interval",
     )
     .add_to_registry()
 )
