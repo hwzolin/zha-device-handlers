@@ -17,7 +17,7 @@ class ThirdRealityMotionCluster(CustomCluster):
     class AttributeDefs(BaseAttributeDefs):
         """Define the attributes of a private cluster."""
 
-        cooldown_time: Final = ZCLAttributeDef(
+        detection_interval: Final = ZCLAttributeDef(
             id=0x0001,
             type=t.uint16_t,
             is_manufacturer_specific=True,
@@ -28,13 +28,13 @@ class ThirdRealityMotionCluster(CustomCluster):
     QuirkBuilder("Third Reality, Inc", "3RMS16BZ")
     .replaces(ThirdRealityMotionCluster)
     .number(
-        attribute_name=ThirdRealityMotionCluster.AttributeDefs.cooldown_time.name,
+        attribute_name=ThirdRealityMotionCluster.AttributeDefs.detection_interval.name,
         min_value=5,
         max_value=3600,
         unit=UnitOfTime.SECONDS,
         cluster_id=ThirdRealityMotionCluster.cluster_id,
-        translation_key="cooldown_time",
-        fallback_name="Cooldown time",
+        translation_key="detection_interval",
+        fallback_name="detection_interval",
     )
     .add_to_registry()
 )
