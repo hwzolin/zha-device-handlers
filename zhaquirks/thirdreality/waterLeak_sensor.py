@@ -42,6 +42,7 @@ class ThirdRealityWaterLeakCluster(CustomCluster):
         attribute_name=ThirdRealityWaterLeakCluster.AttributeDefs.siren_time.name,
         min_value=0,
         max_value=255,
+        unit=UnitOfTime.SECONDS,
         cluster_id=ThirdRealityWaterLeakCluster.cluster_id,
         translation_key="siren_time",
         fallback_name="Siren time",
