@@ -29,6 +29,7 @@ class ThirdRealityPlugCluster(CustomCluster):
             is_manufacturer_specific=True,
         )
 
+
 (
     QuirkBuilder("Third Reality, Inc", "3RSP019BZ")
     .replaces(ThirdRealityPlugCluster)

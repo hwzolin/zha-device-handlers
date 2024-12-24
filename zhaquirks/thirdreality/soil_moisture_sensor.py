@@ -4,7 +4,6 @@ from typing import Final
 
 from zigpy.quirks import CustomCluster
 from zigpy.quirks.v2 import QuirkBuilder
-from zigpy.quirks.v2.homeassistant import PERCENTAGE, UnitOfTemperature
 import zigpy.types as t
 from zigpy.zcl.foundation import BaseAttributeDefs, ZCLAttributeDef
 
@@ -47,7 +46,7 @@ class ThirdRealitySoilMoistureCluster(CustomCluster):
         # unit=UnitOfTemperature.CELSIUS,
         cluster_id=ThirdRealitySoilMoistureCluster.cluster_id,
         translation_key="temperature_correction_celsius",
-        fallback_name="Celsius/100"
+        fallback_name="Celsius/100",
     )
     .number(
         attribute_name=ThirdRealitySoilMoistureCluster.AttributeDefs.temperature_correction_fahrenheit.name,
@@ -57,7 +56,7 @@ class ThirdRealitySoilMoistureCluster(CustomCluster):
         # unit=UnitOfTemperature.FAHRENHEIT,
         cluster_id=ThirdRealitySoilMoistureCluster.cluster_id,
         translation_key="temperature_correction_fahrenheit",
-        fallback_name="Fahrenheit/100"
+        fallback_name="Fahrenheit/100",
     )
     .number(
         attribute_name=ThirdRealitySoilMoistureCluster.AttributeDefs.humidity_correction.name,
@@ -67,7 +66,7 @@ class ThirdRealitySoilMoistureCluster(CustomCluster):
         # unit=PERCENTAGE,
         cluster_id=ThirdRealitySoilMoistureCluster.cluster_id,
         translation_key="humidity_correction",
-        fallback_name="Humidity Correction/100"
+        fallback_name="Humidity Correction/100",
     )
     .add_to_registry()
 )

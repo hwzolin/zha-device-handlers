@@ -23,6 +23,7 @@ class ThirdRealityVibrationSensorCluster(CustomCluster):
             is_manufacturer_specific=True,
         )
 
+
 (
     QuirkBuilder("Third Reality, Inc", "3RVS01031Z")
     .replaces(ThirdRealityVibrationSensorCluster)

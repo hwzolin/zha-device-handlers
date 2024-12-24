@@ -23,6 +23,7 @@ class ThirdRealitySwitchCluster(CustomCluster):
             is_manufacturer_specific=True,
         )
 
+
 (
     QuirkBuilder("Third Reality, Inc", "3RSS009Z")
     .replaces(ThirdRealitySwitchCluster)
