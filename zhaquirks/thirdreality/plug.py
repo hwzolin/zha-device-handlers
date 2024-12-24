@@ -4,6 +4,7 @@ from typing import Final
 
 from zigpy.quirks import CustomCluster
 from zigpy.quirks.v2 import QuirkBuilder
+from zigpy.quirks.v2.homeassistant import UnitOfTime
 import zigpy.types as t
 from zigpy.zcl.foundation import BaseAttributeDefs, ZCLAttributeDef
 
@@ -22,6 +23,27 @@ class ThirdRealityPlugCluster(CustomCluster):
             is_manufacturer_specific=True,
         )
 
+        count_down_time: Final = ZCLAttributeDef(
+            id=0x0001,
+            type=t.uint16_t,
+            is_manufacturer_specific=True,
+        )
+
+(
+    QuirkBuilder("Third Reality, Inc", "3RSP019BZ")
+    .replaces(ThirdRealityPlugCluster)
+    .number(
+        attribute_name=ThirdRealityPlugCluster.AttributeDefs.count_down_time.name,
+        min_value=0,
+        max_value=65535,
+        step=1,
+        unit=UnitOfTime.SECONDS,
+        cluster_id=ThirdRealityPlugCluster.cluster_id,
+        translation_key="count_down_time",
+        fallback_name="Count Down Time",
+    )
+    .add_to_registry()
+)
 
 (
     QuirkBuilder("Third Reality, Inc", "3RSP02028BZ")
@@ -33,6 +55,16 @@ class ThirdRealityPlugCluster(CustomCluster):
         cluster_id=ThirdRealityPlugCluster.cluster_id,
         translation_key="reset_summation_delivered",
         fallback_name="Reset summation delivered",
+    )
+    .number(
+        attribute_name=ThirdRealityPlugCluster.AttributeDefs.count_down_time.name,
+        min_value=0,
+        max_value=65535,
+        step=1,
+        unit=UnitOfTime.SECONDS,
+        cluster_id=ThirdRealityPlugCluster.cluster_id,
+        translation_key="count_down_time",
+        fallback_name="Count Down Time",
     )
     .add_to_registry()
 )
