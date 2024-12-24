@@ -30,8 +30,6 @@ class ThirdRealityCurtainCluster(CustomCluster):
         attribute_name=ThirdRealityCurtainCluster.AttributeDefs.enable_disable_pir_remote.name,
         cluster_id=ThirdRealityCurtainCluster.cluster_id,
         force_inverted=True,
-        # on_value = 0,
-        # off_value = 1,
         translation_key="enable_disable_pir_mode",
         fallback_name="Enable/Disable PIR Remote",
     )
