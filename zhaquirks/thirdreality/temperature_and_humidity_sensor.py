@@ -4,7 +4,6 @@ from typing import Final
 
 from zigpy.quirks import CustomCluster
 from zigpy.quirks.v2 import QuirkBuilder
-from zigpy.quirks.v2.homeassistant import PERCENTAGE, UnitOfTemperature
 import zigpy.types as t
 from zigpy.zcl.foundation import BaseAttributeDefs, ZCLAttributeDef
 
@@ -48,7 +47,7 @@ class ThirdRealityTemperatureAndHumidityCluster(CustomCluster):
         # unit=UnitOfTemperature.CELSIUS,
         cluster_id=ThirdRealityTemperatureAndHumidityCluster.cluster_id,
         translation_key="temperature_correction_celsius",
-        fallback_name="Celsius/100"
+        fallback_name="Celsius/100",
     )
     .number(
         attribute_name=ThirdRealityTemperatureAndHumidityCluster.AttributeDefs.temperature_correction_fahrenheit.name,
@@ -58,7 +57,7 @@ class ThirdRealityTemperatureAndHumidityCluster(CustomCluster):
         # unit=UnitOfTemperature.FAHRENHEIT,
         cluster_id=ThirdRealityTemperatureAndHumidityCluster.cluster_id,
         translation_key="temperature_correction_fahrenheit",
-        fallback_name="Fahrenheit/100"
+        fallback_name="Fahrenheit/100",
     )
     .number(
         attribute_name=ThirdRealityTemperatureAndHumidityCluster.AttributeDefs.humidity_correction.name,
@@ -68,7 +67,7 @@ class ThirdRealityTemperatureAndHumidityCluster(CustomCluster):
         # unit=PERCENTAGE,
         cluster_id=ThirdRealityTemperatureAndHumidityCluster.cluster_id,
         translation_key="humidity_correction",
-        fallback_name="Humidity Correction/100"
+        fallback_name="Humidity Correction/100",
     )
     .add_to_registry()
 )
