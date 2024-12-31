@@ -35,7 +35,7 @@ class ThirdRealityVibrationSensorCluster(CustomCluster):
         unit=UnitOfTime.SECONDS,
         cluster_id=ThirdRealityVibrationSensorCluster.cluster_id,
         translation_key="detection_interval",
-        fallback_name="Detection interval"
+        fallback_name="Detection interval",
     )
     .add_to_registry()
 )
