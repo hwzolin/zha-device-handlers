@@ -29,7 +29,7 @@ class ThirdRealityMotionCluster(CustomCluster):
     .replaces(ThirdRealityMotionCluster)
     .number(
         attribute_name=ThirdRealityMotionCluster.AttributeDefs.detection_interval.name,
-        min_value=5,
+        min_value=0,
         max_value=3600,
         unit=UnitOfTime.SECONDS,
         cluster_id=ThirdRealityMotionCluster.cluster_id,
