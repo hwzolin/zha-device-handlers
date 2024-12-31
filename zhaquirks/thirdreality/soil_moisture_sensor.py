@@ -1,4 +1,4 @@
-"""Third Reality temperature and humidity sensor devices."""
+"""Third Reality soil moisture sensor devices."""
 
 from typing import Final
 
